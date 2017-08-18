@@ -8,12 +8,24 @@ namespace MyTestApp.ViewModel
 {
     public class CommonViewModel
     {
+        static Lazy<CommonViewModel> ModelCreator = new Lazy<CommonViewModel>(() => new CommonViewModel());
+
+        public static CommonViewModel Instance
+        {
+            get
+            {
+                return ModelCreator.Value;
+            }
+        }
         public MainWindowViewModel MainVM { get; set; }
         public ChildWindowViewModel ChildVM { get; set; }
-        public CommonViewModel()
+        private CommonViewModel()
         {
             MainVM = new MainWindowViewModel();
-            ChildVM = new ChildWindowViewModel();
+            ChildVM = new ChildWindowViewModel()
+            {
+                List = MainVM.List
+            };
         }
     }
 }
