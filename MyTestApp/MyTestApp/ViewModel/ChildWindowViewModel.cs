@@ -12,20 +12,11 @@ namespace MyTestApp.ViewModel
     {
         public ChildWindowViewModel() { }
 
-        private string _text;
+        public ICommand SaveCommand => new ActionCommand<string>(Add);
 
-        public string Text
+        private void Add(string text)
         {
-            get { return _text; }
-            set
-            {
-                _text = value;
-                RaisePropertyChanged("Text");
-            }
+            List.Add(text);
         }
-        public ICommand SaveCommand => new ActionCommand(() =>
-        {
-           List.Add(Text);
-        });
     }
 }

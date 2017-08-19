@@ -11,6 +11,7 @@ namespace MyTestApp.ViewModel
 {
     public class ViewModelBase: INotifyPropertyChanged
     {
+        #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void RaisePropertyChanged(string p)
@@ -22,5 +23,6 @@ namespace MyTestApp.ViewModel
                 handler(this, e);
             }
         }
+        #endregion //INotifyPropertyChanged Members
     }
 }

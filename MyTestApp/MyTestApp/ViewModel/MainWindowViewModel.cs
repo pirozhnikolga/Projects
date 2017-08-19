@@ -19,7 +19,7 @@ namespace MyTestApp.ViewModel
         {
             get
             {
-                if(_list == null) _list = new ObservableCollection<string>() {"1 fghj", "2 cvbn"};
+                if(_list == null) _list = new ObservableCollection<string>() {"Ира", "Саша", "Лена"};
                 return _list;
             }
             set
@@ -31,8 +31,7 @@ namespace MyTestApp.ViewModel
 
         public ICommand OpenCommand => new ActionCommand(() =>
         {
-            var win = new ChildWindow();
-            win.ShowDialog();
+            WindowFactory.CreateChildWindow();
         });
     }
 

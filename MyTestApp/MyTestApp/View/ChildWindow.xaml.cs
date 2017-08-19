@@ -23,7 +23,6 @@ namespace MyTestApp.View
         public ChildWindow()
         {
             InitializeComponent();
-            DataContext = CommonViewModel.Instance;
         }
     }
 }

@@ -2,7 +2,6 @@
     x:Class="MyTestApp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:MyTestApp"
-    StartupUri="View/MainWindow.xaml">
+    xmlns:local="clr-namespace:MyTestApp">
     <Application.Resources />
 </Application>

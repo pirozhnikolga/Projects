@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyTestApp.ViewModel
 {
-    public class CommonViewModel
+    public class CommonViewModel: ViewModelBase
     {
-        static Lazy<CommonViewModel> ModelCreator = new Lazy<CommonViewModel>(() => new CommonViewModel());
+        private static readonly Lazy<CommonViewModel> ModelCreator = new Lazy<CommonViewModel>(() => new CommonViewModel());
 
-        public static CommonViewModel Instance
-        {
-            get
-            {
-                return ModelCreator.Value;
-            }
-        }
+        public static CommonViewModel Instance => ModelCreator.Value;
+
         public MainWindowViewModel MainVM { get; set; }
         public ChildWindowViewModel ChildVM { get; set; }
         private CommonViewModel()

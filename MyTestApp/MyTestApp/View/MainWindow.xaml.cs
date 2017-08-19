@@ -24,7 +24,6 @@ namespace MyTestApp
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = CommonViewModel.Instance;
         }
     }
 }
