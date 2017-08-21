@@ -31,7 +31,7 @@
             Grid.Column="0"
             Height="30"
             Margin="20"
-            Command="{Binding ChildVM.SaveCommand}"
+            Command="{Binding SaveCommand}"
             CommandParameter="{Binding ElementName=TextBox, Path=Text}"
             Content="Готово" />
         <ListView
@@ -39,6 +39,6 @@
             Grid.Column="0"
             Padding="20"
             Background="BlueViolet"
-            ItemsSource="{Binding Path=MainVM.List}" />
+            ItemsSource="{Binding Path=List}" />
     </Grid>
 </Window>

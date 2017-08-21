@@ -19,7 +19,7 @@ namespace MyTestApp.ViewModel
         {
             get
             {
-                if(_list == null) _list = new ObservableCollection<string>() {"Ира", "Саша", "Лена"};
+                if (_list == null) _list = NamesList.Instance;
                 return _list;
             }
             set

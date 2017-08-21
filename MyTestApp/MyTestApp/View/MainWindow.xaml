@@ -22,13 +22,13 @@
             Grid.Column="0"
             Padding="20"
             Background="BlueViolet"
-            ItemsSource="{Binding Path=MainVM.List}" />
+            ItemsSource="{Binding Path=List}" />
         <Button
             Grid.Row="1"
             Grid.Column="0"
             Margin="50"
             Background="Aqua"
-            Command="{Binding MainVM.OpenCommand}"
+            Command="{Binding OpenCommand}"
             Content="Добавить имя" />
     </Grid>
 </Window>

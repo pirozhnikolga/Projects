@@ -16,7 +16,7 @@ namespace MyTestApp
         public static void CreateChildWindow()
         {
             var view = new ChildWindow();
-            var viewModel = CommonViewModel.Instance;
+            var viewModel = new ChildWindowViewModel();
             view.DataContext = viewModel;
             view.ShowDialog();
         }
@@ -24,7 +24,7 @@ namespace MyTestApp
         public static void CreateMainWindow()
         {
             var view = new MainWindow();
-            var viewModel = CommonViewModel.Instance;
+            var viewModel = new MainWindowViewModel();
             view.DataContext = viewModel;
             view.Show();
         }
