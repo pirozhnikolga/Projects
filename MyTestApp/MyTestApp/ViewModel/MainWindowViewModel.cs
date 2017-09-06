@@ -29,10 +29,38 @@ namespace MyTestApp.ViewModel
             }
         }
 
+
+        private List<Obj> _objects;
+        public List<Obj> Objects
+        {
+            get
+            {
+                if (_objects == null) _objects = new List<Obj>() {new Obj("Petrov", 24), new Obj("Ivanov", 54)};
+                return _objects;
+            }
+            set
+            {
+                _objects = value;
+                RaisePropertyChanged("Objects");
+            }
+        }
+
         public ICommand OpenCommand => new ActionCommand(() =>
         {
             WindowFactory.CreateChildWindow();
         });
+    }
+
+    public class Obj
+    {
+        public string Name { get; set; }
+        public int Some { get; set; }
+
+        public Obj(string name, int some)
+        {
+            Name = name;
+            Some = some;
+        }
     }
 
 }
