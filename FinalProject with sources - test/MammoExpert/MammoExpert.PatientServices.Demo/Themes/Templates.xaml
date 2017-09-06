@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:MammoExpert.PatientServices.UI.Controls;assembly=MammoExpert.PatientServices.UI.Controls"
+    xmlns:sources="clr-namespace:MammoExpert.PatientServices.Sources;assembly=MammoExpert.PatientServices.Sources"
+    xmlns:viewModel="clr-namespace:MammoExpert.PatientServices.Demo.ViewModel">
+
+    <!--  Templates for workspaces of main window  -->
+    <DataTemplate DataType="{x:Type viewModel:ManualInputViewModel}">
+        <controls:UcManualInput />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:PatientSearchViewModel}">
+        <controls:UcPatientSearch />
+    </DataTemplate>
+
+    <!--  Templates for configuaration window  -->
+    <DataTemplate DataType="{x:Type viewModel:DBConnectionConfigurationModel}">
+        <controls:UcDBConnectionConfigurationViewmodel />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:WorklistConnectionConfigurationModel}">
+        <controls:UcWorklistConnectionConfiguration />
+    </DataTemplate>
+
+    <DataTemplate x:Key="TitledTabItemTemplate">
+        <ContentPresenter VerticalAlignment="Center" Content="{Binding Path=DisplayName}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspacesTemplate">
+        <TabControl
+            Margin="4"
+            IsSynchronizedWithCurrentItem="True"
+            ItemTemplate="{StaticResource TitledTabItemTemplate}"
+            ItemsSource="{Binding}" />
+    </DataTemplate>
+
+</ResourceDictionary>

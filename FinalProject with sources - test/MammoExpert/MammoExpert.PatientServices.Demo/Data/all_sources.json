@@ -1,0 +1,56 @@
+﻿[
+  {
+    "Id": 2,
+    "Type": 0,
+    "Description": "Описание 2",
+    "Name": "База данных 1",
+    "ConnectionString": "Строка",
+    "Properties": {
+      "Driver": "",
+      "Ip": "127.167.0.1",
+      "Port": "8080",
+      "UserName": "Вася",
+      "Password": "1254"
+    }
+  },
+  {
+    "Id": 3,
+    "Type": 0,
+    "Description": "Описание 3",
+    "Name": "База данных 2",
+    "ConnectionString": "Строка",
+    "Properties": {
+      "Driver": "",
+      "Ip": "127.162.0.0",
+      "Port": "9090",
+      "UserName": "Петя",
+      "Password": "333"
+    }
+  },
+  {
+    "Id": 4,
+    "Type": 1,
+    "Description": "Описание 4",
+    "Name": "Рабочий список 1",
+    "ConnectionString": "Строка",
+    "Properties": {
+      "Header": "Заголовок",
+      "Ip": "127.192.1.1",
+      "Port": "8088",
+      "Timeout": "1000"
+    }
+  },
+  {
+    "Id": 5,
+    "Type": 1,
+    "Description": "Описание 5",
+    "Name": "Рабочий список 12",
+    "ConnectionString": "Строка",
+    "Properties": {
+      "Header": "Заголовок 33",
+      "Ip": "192.162.0.0",
+      "Port": "9190",
+      "Timeout": "2000"
+    }
+  }
+]
